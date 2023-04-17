@@ -9,6 +9,15 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 	<title>SpaceX</title>
+
+	<script type="importmap">
+	{
+		"imports": {
+			"three": "https://unpkg.com/three@0.151.3/build/three.module.js",
+			"three/addons/": "https://unpkg.com/three@0.151.3/examples/jsm/"
+		}
+	}
+	</script>
 </head>
 <body>
 	<div class="wrapper">
@@ -46,7 +55,10 @@
 					<h1 class="main__title">Falcon Heavy</h1>
 					<h3 class="main__subtitle">The most powerful operational rocket in the world by a factor of two</h3>
 					<div class="main__arrow"></div>
-					<div class="main__img"><img src="img/01.png" alt="Earth"></div>
+					<!-- <div class="main__img"><img src="img/01.png" alt="Earth"></div> -->
+					<div>
+						<canvas id="canvas" width="1000" height="1000"></canvas>
+					</div>
 				</section>
 				<section class="main__script script">
 					<div class="script__left-block">
@@ -107,5 +119,7 @@
 			</div>
 		</footer>
 	</div>
+	<script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+	<script type="module" src="js/3d.js"></script>
 </body>
 </html>
